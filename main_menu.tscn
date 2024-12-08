@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://2ba8n8xy2nrn"]
+
+[ext_resource type="Texture2D" uid="uid://7jlpajy78b0x" path="res://assets/main_menu/title.png" id="1_exbc7"]
+[ext_resource type="Texture2D" uid="uid://dpoljgmirrht4" path="res://assets/main_menu/version.png" id="2_se3e4"]
+[ext_resource type="Texture2D" uid="uid://dv6pthdmh6iw" path="res://assets/main_menu/characters.png" id="3_68042"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 1122.0
+offset_bottom = 618.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_exbc7")
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 30
+
+[node name="Continue" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Continue"
+flat = true
+alignment = 0
+
+[node name="NewGame" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "New Game"
+flat = true
+alignment = 0
+
+[node name="Options" type="Button" parent="HBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Options"
+flat = true
+alignment = 0
+
+[node name="Version" type="TextureRect" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_se3e4")
+stretch_mode = 4
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/CenterContainer"]
+layout_mode = 2
+texture = ExtResource("3_68042")
+stretch_mode = 4
